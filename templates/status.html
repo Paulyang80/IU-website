@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Learning Project</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./static/main.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+<link rel="icon" href="{{url_for('static',filename='icon.jfif')}}">
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    background: #6392CF;
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Comfortaa', cursive;
+}
+.topnav {
+    background-color: #483D8B;
+    overflow: hidden;
+  }
+.topnav a{
+    float:left;
+    color:#7B68EE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Andale Mono, monospace;
+}
+.topnav a:hover{
+    background: #EE82EE;
+    color: #191970;
+}
+.topnav a.active{
+    background-color: #9370DB;
+    color: white;
+}
+.search-box{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#FFFAF0;
+  height:100px;
+  border-radius:100px;
+  padding:10px;
+}
+.search-box:hover>.search-txt{
+  width:500px;
+  padding:0 6px;
+}
+.search-box:hover>.search-btn{
+  background:white;
+  color:black;
+}
+.search-btn{
+  color:#DCDCDC;
+  float:right;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:#808080;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:0.5s;
+}
+.search-btn > i {
+ font-size: 50px;
+}
+.search-txt{
+  border:none;
+  background:none;
+  outline:none;
+  float:left;
+  padding:0;
+  color:black;
+  font-size:30px;
+  transition:0.5s;
+  line-height:90px;
+  width:0px;
+  vertical-align: middle;
+}
+#btn{
+  margin:16px;
+  background:#FFFAF0;
+  border:0;
+  color:black;
+  padding: 12px 28px;
+  font-size:50px;
+  border-radius: 4px;
+  font-family: Andale Mono, monospace;
+}
+#fix-center{
+  position:fixed;
+  top:75%;
+  left:55%;
+  margin-top:-100px;
+  margin-left:-200px;
+}
+.card{
+  cursor: pointer;
+  width: 270px;
+  height: 480px;
+}
+.front,.back{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+.front img{
+  height: 100%;
+
+}
+.front{
+  transform: perspective(600px) rotateY(0deg)
+}
+.back{
+  background: #f1f1f1;
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%;
+
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card:hover>.front{
+  transform: perspective(600px) rotateY(-180deg)
+}
+.card:hover>.back{
+  transform: perspective(600px) rotateY(0deg)
+}
+.left{
+    position: absolute;
+    top: 52%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+}
+.right{
+  position: absolute;
+  top: 52%;
+  left: 80%;
+  transform: translate(-50%,-50%);
+}
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href={{url_for('index')}}>Home</a>
+  <a>About</a>
+  <a href={{url_for('image')}}>Images</a>
+  <a href={{url_for('statistics')}}>Statistics</a>
+  <a href="{{url_for('shopping')}}">Shopping</a>
+</div>
+<div class="card left">
+  <div class="front">
+    <img src="{{url_for('static', filename='hover-1.jpg')}}" alt="IU" width: 360px;
+    height: 640px;>
+</div>
+<div class="back">
+    <div class="back-content middle">
+        <h2>IU</h2>
+        <span>IU the best</span>
+        <div class="text-left" style="text-align:left;">
+        <br>參演電視劇：
+        <br>2011 KBS《Dream High》飾演：金必淑
+        <br>2011 SBS 《Welcome to the show》飾演：IU
+        <br>2013 KBS2 《最佳李純信》飾演：李純信
+        <br>2013《漂亮男人》飾演：金普通
+        <br>2015《製作人》飾演：cindy
+        <br>2016年 SBS《月之戀人－步步驚心：麗》飾演 解樹／高夏真
+        <br>2018 《我的大叔》飾演：李至安
+        <br>2018《德魯納酒店》飾演：張滿月
+        </div>
+        <div class="sm">
+        </div>
+    </div>
+</div>
+</div>
+<div class="card right">
+  <div class="front">
+    <img src="{{url_for('static', filename='hover-2.jpg')}}" alt="IU" width: 360px;
+    height: 640px;>
+</div>
+<div class="back">
+    <div class="back-content middle">
+        <h2>IU</h2>
+        <span>IU the best</span>
+        <div class="text-left" style="text-align: left;">
+        <br>身高：162cm
+        <br>體重：45kg
+        <br>血型：A型
+        <br>星座：金牛座
+        <br>出生地：韓國首爾市
+        <br>出道日期：2008年9月18日
+        <br>經紀公司：LOEN Entertainment
+        <br>粉絲名稱：U-ana (Uaena)
+        <br>興趣：讀書 唱歌 跳舞
+        <br>喜歡的植物：百合花
+        <br>特長：吉他，唱歌，機器人舞
+        <br>喜歡的食物：生魚片，生肝
+        <br>喜歡的植物：百合花
+        <br>喜歡的顏色：天空的藍色和黃色
+        </div>
+        <div class="sm">
+        </div>
+    </div>
+</div>
+</div>
+<div class="search-box">
+<input class="search-txt" type="text" name="BoxName" placeholder="informations for you" id="sendData"/>
+<button class="search-btn"  id="btn1" onclick="SearchGo()">
+<i class="fas fa-search"></i></button></div>
+</body>
+</html>

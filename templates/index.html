@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Learning Project</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='test.css') }}">
+        <link rel="icon" href="{{url_for('static',filename='icon.jfif')}}">
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" >Home</a>
+            <a href={{url_for('status')}}>About</a>
+            <a href={{url_for('image')}}>Images</a>
+            <a href={{url_for('statistics')}}>Statistics</a>
+            <a href="{{url_for('shopping')}}">Shopping</a>
+        </div>
+        
+        <div style="border:10px #483D8B double"
+        <div class="slidershow middle">
+            <div class="slides">
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+                <input type="radio" name="r" id="r5">
+                <div class="slide s1">
+                    <img src="{{ url_for('static', filename='wp3743170-iu-k-pop-wallpapers.jpg') }}" alt="IU"
+                    width="960" height="600">
+                </div>
+                <div class="slide">
+                    <img src="{{ url_for('static',filename='wp3743177-iu-k-pop-wallpapers.jpg')}}" alt="IU"
+                    width="960" height="600">
+                </div>
+                <div class="slide">
+                    <img src="{{url_for('static', filename='wp3743181-iu-k-pop-wallpapers.jpg')}}" alt="IU"
+                    width="960" height="600">
+                </div>
+                <div class="slide">
+                    <img src="{{url_for('static', filename='wp3743155-iu-k-pop-wallpapers.jpg')}}" alt="IU"
+                    width="960" height="600">
+                </div>
+                <div class="slide">
+                    <img src="{{url_for('static', filename='3.jpg')}}" alt="IU"
+                    width="960" height="600">
+                </div>
+            </div>
+            <div class="navigation">
+                <label for="r1" class="bar"></label>
+                <label for="r2" class="bar"></label>
+                <label for="r3" class="bar"></label>
+                <label for="r4" class="bar"></label>
+                <label for="r5" class="bar"></label>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

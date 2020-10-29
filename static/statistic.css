@@ -1,0 +1,114 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #6392CF;
+}
+.topnav {
+    background-color: #483D8B;
+    overflow: hidden;
+  }
+.topnav a{
+    float:left;
+    color:#7B68EE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Andale Mono, monospace;
+}
+.topnav a:hover{
+    background: #EE82EE;
+    color: #191970;
+}
+.topnav a.active{
+    background-color: #9370DB;
+    color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, 0.6);
+    max-width: 550px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper .input{
+    width: 85%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.searchBtn{
+    background: #F0F8FF;
+    width: 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.searchBtn .fas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+}
+
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 20px;
+    min-width: 800px;
+    margin-left:auto; 
+    margin-right:auto;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.content-table tbody .year{
+    background-color: #9370DB;
+}
+
+.content-table thead tr{
+    background-color: #483D8B;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+
+.content-table tbody tr{
+    border-radius:1px solid white;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: aliceblue;
+    
+}
+
+.content-table tbody tr:nth-of-type(odd){
+    background-color: #6495ED;
+    
+}
+

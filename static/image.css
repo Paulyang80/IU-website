@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #6392CF;
+}
+.topnav {
+    background-color: #483D8B;
+    overflow: hidden;
+  }
+.topnav a{
+    float:left;
+    color:#7B68EE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Andale Mono, monospace;
+}
+.topnav a:hover{
+    background: #EE82EE;
+    color: #191970;
+}
+.topnav a.active{
+    background-color: #9370DB;
+    color: white;
+}
+.gallery{
+    margin: 10px 50px;
+}
+.gallery img{
+    transition: 1s;
+    padding: 15px;
+    width: 200px;
+}
+.gallery img:hover{
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}

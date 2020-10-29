@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning Project</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='statistic.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <link rel="icon" href="{{url_for('static',filename='icon.jfif')}}">
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href={{url_for('index')}}>Home</a>
+            <a href={{url_for('status')}} >About</a>
+            <a href={{url_for('image')}} >Images</a>
+            <a>Statistics</a>
+            <a href="{{url_for('shopping')}}">Shopping</a>
+        </div>
+        <!--<div class="wrapper">
+            <input type="text" class="input" placeholder="Youtube Search" name="YoutubeName" id="YTsearch">
+            <div class="searchBtn">
+                <button onclick="SearchGo()"><i class="fas fa-search"></i></button>
+            </div> 
+        </div>-->
+        <h1 style="text-align: center;">單獨演唱會</h1>
+        <table class="content-table" style="text-align:center;text-align:center;" width="60%">
+            <tbody><tr>
+            <th><b>年份</b>
+            </th>
+            <th><b>日期</b>
+            </th>
+            <th><b>演唱會站次</b>
+            </th>
+            <th><b>舉行地點</b>
+            </th>
+            </tr>
+            <tr>
+            <th colspan="4">首次韓國巡迴演唱會－《REAL FANTASY》
+            </th></tr>
+            <tr>
+            <td rowspan="7" class="year">2012年
+            </td>
+            <td>6月2－3日
+            </td>
+            <td>首爾站
+            </td>
+            <td>慶熙大學和平殿堂
+            </td>
+            </tr>
+            <tr>
+            <td>6月9－10日
+            </td>
+            <td>蔚山站
+            </td>
+            <td>蔚山KBS展演中心
+            </td></tr>
+            <tr>
+            <td>6月16日
+            </td>
+            <td>全州站
+            </td>
+            <td>國立全北大學體育場
+            </td></tr>
+            <tr>
+            <td>6月30日、7月1日
+            </td>
+            <td>水原站
+            </td>
+            <td>京畿藝文中心和平堂
+            </td></tr>
+            <tr>
+            <td>7月7－8日
+            </td>
+            <td>釜山站
+            </td>
+            <td>釜山KBS展演中心
+            </td></tr>
+            <tr>
+            <td>7月14－15日
+            </td>
+            <td>大邱站
+            </td>
+            <td>嶺南大學藝術中心大禮堂
+            </td></tr>
+            <tr>
+            <td>9月22－23日
+            </td>
+            <td>首爾站(Encore)
+            </td>
+            <td>韓國戰爭紀念館和平廣場
+            </td>
+           </tr>
+            <tr>
+            <th colspan="5">首次日本演唱會－《IU Friendship Special Concert ～Autumn 2012～》
+            </th></tr>
+            <tr>
+            <td class="year">2012年
+            </td>
+            <td>9月17日
+            </td>
+            <td>東京站
+            </td>
+            <td>東京國際會議A廳
+            </td>
+            </tr>
+            <tr>
+            <th colspan="5">第二次韓國巡迴演唱會－《Modern Times》
+            </th></tr>
+            <tr>
+            <td rowspan="2" class="year">2013年
+            </td>
+            <td>11月23－24日
+            </td>
+            <td>首爾站
+            </td>
+            <td>慶熙大學和平殿堂
+            </td>
+            </tr>
+            <tr>
+            <td>11月30日、12月1日
+            </td>
+            <td>釜山站
+            </td>
+            <td>釜山KBS大廳
+            </td>
+           </tr>
+            <tr>
+            <th colspan="5">首次韓國小劇場演唱會－《Just One Step... That Much More》
+            </th></tr>
+            <tr>
+            <td class="year">2014年
+            </td>
+            <td>2014年5月22－25日、<br>
+            <p>2014年5月29日－6月1日 
+            </p>
+            </td>
+            <td>首爾站
+            </td>
+            <td>西江大學Mary Hall
+            </td>
+            </tr>
+            <tr>
+            <th colspan="5">第三次韓國巡迴演唱會 -《CHAT-SHIRE》
+            </th></tr>
+            <tr>
+            <td rowspan="6" class="year">2015年
+            </td></tr>
+            <tr>
+            <td>11月21－22日
+            </td>
+            <td>首爾站
+            </td>
+            <td>奧林匹克公園奧林匹克Hall
+            </td>
+            </tr>
+            <tr>
+            <td>11月29日
+            </td>
+            <td>釜山站
+            </td>
+            <td>BEXCO釜山會展中心禮堂
+            </td>
+            </tr>
+            <tr>
+            <td>12月6日
+            </td>
+            <td>大邱站
+            </td>
+            <td>大邱Exco展覽大廳
+            </td>
+           </tr>
+            <tr>
+            <td>12月13日
+            </td>
+            <td>光州站
+            </td>
+            <td>金大中會展中心展覽大廳
+            </td>
+           </tr>
+            <tr>
+            <td>12月30－31日
+            </td>
+            <td>首爾站(Encore)
+            </td>
+            <td>蠶室學生體育館
+            </td>
+            </tr>
+            <tr>
+            <th colspan="5">2016巡迴演唱會 -《24 STEPS&nbsp;: ONE TWO THREE FOUR》
+            </th></tr>
+            <tr>
+            <td rowspan="3" class="year">2016年
+            </td></tr>
+            <tr>
+            <td>12月3－4日
+            </td>
+            <td>首爾站
+            </td>
+            <td>SK奧林匹克手球競技場
+            </td>
+            </tr>
+            <tr>
+            <td>12月16日
+            </td>
+            <td>香港站
+            </td>
+            <td>灣仔會議展覽中心Hall 5BC
+            </td>
+            </tr>
+            <tr>
+            <td class="year">2017年
+            </td>
+            <td>1月7日
+            </td>
+            <td>台北站
+            </td>
+            <td>新莊體育館
+            </td>
+            </tr>
+            <tr>
+            <th colspan="5">2017巡迴演唱會 -《Palette》
+            </th></tr>
+            <tr>
+            <td rowspan="6" class="year">2017年
+            </td></tr>
+            <tr>
+            <td>11月3日
+            </td>
+            <td>釜山站
+            </td>
+            <td>釜山社稷室內體育館
+            </td>
+            </tr>
+            <tr>
+            <td>11月11日
+            </td>
+            <td>光州站
+            </td>
+            <td>光州女子大學大運會競技場
+            </td></tr>
+            <tr>
+            <td>11月25日
+            </td>
+            <td>香港站
+            </td>
+            <td>亞洲國際博覽館10號展館
+            </td></tr>
+            <tr>
+            <td>12月3日
+            </td>
+            <td>清州站
+            </td>
+            <td>清州大學石隅文化體育館
+            </td></tr>
+            <tr>
+            <td>12月9－10日
+            </td>
+            <td>首爾站
+            </td>
+            <td>蠶室室內體育館
+            </td></tr>
+            <tr>
+            <th colspan="5">2018巡迴演唱會 -《이지금 dlwlrma》
+            </th></tr>
+            <tr>
+            <td rowspan="7" class="year">2018年
+            </td>
+            <td>10月28日
+            </td>
+            <td>釜山站
+            </td>
+            <td>釜山社稷室內體育館
+            </td>
+            </tr>
+            <tr>
+            <td>11月10日
+            </td>
+            <td>光州站
+            </td>
+            <td>光州女子大學大運會競技場
+            </td></tr>
+            <tr>
+            <td>11月17 - 18日
+            </td>
+            <td>首爾站
+            </td>
+            <td>首爾奧林匹克體操競技場
+            </td></tr>
+            <tr>
+            <td>12月8日
+            </td>
+            <td>香港站
+            </td>
+            <td>亞洲國際博覽館10號展館
+            </td></tr>
+            <tr>
+            <td>12月15日
+            </td>
+            <td>新加坡站
+            </td>
+            <td>星爍藝術表演中心
+            </td></tr>
+            <tr>
+            <td>12月16日
+            </td>
+            <td>曼谷站
+            </td>
+            <td>IMPACT展覽中心4號展館
+            </td></tr>
+            <tr>
+            <td>12月24 - 25日
+            </td>
+            <td>台北站
+            </td>
+            <td>南港展覽館
+            </td></tr>
+            <tr>
+            <td class="year">2019年
+            </td>
+            <td>1月5日
+            </td>
+            <td>濟州站 (謝幕最終場)
+            </td>
+            <td>濟州國際會議中心耽羅廳
+            </td>
+            </tr>
+            <tr>
+            <th colspan="5">2019巡迴演唱會 -《LOVE, POEM》
+            </th></tr>
+            <tr>
+            <td rowspan="10" class="year">2019年
+            </td>
+            <td>11月2-3日
+            </td>
+            <td>光州站
+            </td>
+            <td>光州女子大學世大運體育館
+            </td>
+            </tr>
+            <tr>
+            <td>11月9日
+            </td>
+            <td>仁川站
+            </td>
+            <td>仁川南洞體育館
+            </td></tr>
+            <tr>
+            <td>11月16日
+            </td>
+            <td>釜山站
+            </td>
+            <td>釜山社稷體育館
+            </td></tr>
+            <tr>
+            <td>11月23-24日
+            </td>
+            <td>首爾站
+            </td>
+            <td>首爾奧林匹克體操競技場
+            </td></tr>
+            <tr>
+            <td>11月30日、12月1日
+            </td>
+            <td>台北站
+            </td>
+            <td>桃園國立體育大學綜合體育館
+            </td></tr>
+            <tr>
+            <td>12月6-7日
+            </td>
+            <td>新加坡站
+            </td>
+            <td>新加坡星爍藝術表演中心
+            </td></tr>
+            <tr>
+            <td>12月13日
+            </td>
+            <td>馬尼拉站
+            </td>
+            <td>馬尼拉阿拉內塔體育館
+            </td></tr>
+            <tr>
+            <td>12月21日
+            </td>
+            <td>吉隆坡站
+            </td>
+            <td>吉隆坡亞通體育館
+            </td></tr>
+            <tr>
+            <td>12月24日
+            </td>
+            <td>曼谷站
+            </td>
+            <td>曼谷Thunder Dome Arena
+            </td></tr>
+            <tr>
+            <td>12月28-29日
+            </td>
+            <td>雅加達站
+            </td>
+            <td>雅加達Tennis Indoor Senayan
+            </td></tr>
+            </tbody>
+        </table>
+        <h1 style="text-align: center;">SHOWCASE</h1>
+        <table class="content-table" style="text-align:center" width="65%">
+            <tbody><tr>
+            <th width="50px">年份
+            </th>
+            <th width="90px"><b>日期</b>
+            </th>
+            <th width="150px"><b>見面會站次</b>
+            </th>
+            <th width="300px"><b>舉行地點</b>
+            </th></tr>
+            <tr>
+            <th colspan="4">日本Special live－《IU Japan Premium Special Live》
+            </th></tr>
+            <tr>
+            <td class="year">2012年
+            </td>
+            <td>1月24日
+            </td>
+            <td>東京
+            </td>
+            <td>澀谷Orchard Hall
+            </td>
+            </tr>
+            <tr>
+            <th colspan="5">首次日本Showcase－《IU Friendship Showcase ~ Spring 2012~》
+            </th></tr>
+            <tr>
+            <td rowspan="6" class="year">2012年
+            </td></tr>
+            <tr>
+            <td>4月21日
+            </td>
+            <td>東京站
+            </td>
+            <td>東京國際論壇大樓A廳
+            </td>
+            </tr>
+            <tr>
+            <td>4月23日
+            </td>
+            <td>札幌站
+            </td>
+            <td>Cube Garden
+            </td></tr>
+            <tr>
+            <td>4月24日
+            </td>
+            <td>名古屋站
+            </td>
+            <td>名古屋Club Quattro
+            </td></tr>
+            <tr>
+            <td>5月2日
+            </td>
+            <td>大阪站
+            </td>
+            <td>梅田Club Quattro
+            </td></tr>
+            <tr>
+            <td>5月3日
+            </td>
+            <td>福岡站
+            </td>
+            <td>福岡Imuzu Hall
+            </td></tr>
+            <tr>
+            <th colspan="5">第三張正規專輯《Modern Times》回歸 Showcase
+            </th></tr>
+            <tr>
+            <td class="year">2013年
+            </td>
+            <td>10月7日
+            </td>
+            <td>首爾
+            </td>
+            <td>奧林匹克公園The K藝術廳
+            </td>
+            </tr>
+            <tr>
+            <th colspan="5">首次香港Showcase－《IU Modern Times Showcase in Hong Kong》
+            </th></tr>
+            <tr>
+            <td class="year">2014年
+            </td>
+            <td>3月23日
+            </td>
+            <td>香港
+            </td>
+            <td>九龍灣國際展貿中心Star Hall
+            </td>
+            </tr>
+            <tr>
+            <th colspan="5">《CHAT-SHIRE》回歸 Showcase - 《CHAT-SHOW》
+            </th></tr>
+            <tr>
+            <td class="year">2015年
+            </td>
+            <td>10月23日
+            </td>
+            <td>首爾
+            </td>
+            <td>漢南洞Understage
+            </td>
+            </tr>
+            <tr>
+            <th colspan="5">第四張正規專輯《Palette》回歸 Showcase
+            </th></tr>
+            <tr>
+            <td class="year">2017年
+            </td>
+            <td>4月21日
+            </td>
+            <td>首爾
+            </td>
+            <td>合井FAN-Square Live Hall
+            </td>
+            </tr></tbody></table>
+            <h1 style="text-align: center;">粉絲見面會</h1>
+            <table class="content-table" style="text-align:center" width="60%">
+                <tbody><tr>
+                <th width="60px"><b>年份</b>
+                </th>
+                <th width="90px"><b>日期</b>
+                </th>
+                <th width="150px"><b>見面會站次</b>
+                </th>
+                <th width="300px"><b>舉行地點</b>
+                </th>
+                </tr>
+                <tr>
+                <th colspan="4">1004天出道紀念粉絲見面會
+                </th></tr>
+                <tr>
+                <td class="year">2011年
+                </td>
+                <td>6月18日
+                </td>
+                <td>首爾
+                </td>
+                <td>廣津AX-KOREA
+                </td>
+               </tr>
+                <tr>
+                <th colspan="5">首次日本粉絲見面會 《IU THE FIRST FANMEETING IN JAPAN》
+                </th></tr>
+                <tr>
+                <td rowspan="4" class="year">2012年
+                </td></tr>
+                <tr>
+                <td>3月27日
+                </td>
+                <td>東京站
+                </td>
+                <td>東京國際論壇大樓A廳
+                </td>
+               </tr>
+                <tr>
+                <td>5月22日
+                </td>
+                <td>大阪站
+                </td>
+                <td>NHK大阪Hall
+                </td></tr>
+                <tr>
+                <td>5月31日
+                </td>
+                <td>名古屋站
+                </td>
+                <td>刈谷市綜合文化中心人民會堂
+                </td></tr>
+                <tr>
+                <th colspan="5">六週年出道紀念粉絲見面會
+                </th></tr>
+                <tr>
+                <td class="year">2014年
+                </td>
+                <td>9月18日
+                </td>
+                <td>首爾
+                </td>
+                <td>樂天Card藝術中心
+                </td>
+               </tr>
+                <tr>
+                <th colspan="5">七週年出道紀念粉絲見面會 《2015 IU Award》
+                </th></tr>
+                <tr>
+                <td class="year">2015年
+                </td>
+                <td>9月20日
+                </td>
+                <td>首爾
+                </td>
+                <td>梨花女子大學Samsung Hall
+                </td>
+               </tr>
+                <tr>
+                <th colspan="5">2015-16巡迴粉絲見面會 《 I &amp; U 》
+                </th></tr>
+                <tr>
+                <td rowspan="4" class="year">2015年
+                </td></tr>
+                <tr>
+                <td>10月21日
+                </td>
+                <td>香港站
+                </td>
+                <td>九龍灣國際展貿中心</a>Star Hall
+                </td>
+               </tr>
+                <tr>
+                <td>11月8日
+                </td>
+                <td>上海站
+                </td>
+                <td>上海大舞台</a>
+                </td>
+             </tr>
+                <tr>
+                <td>12月20日
+                </td>
+                <td>北京站
+                </td>
+                <td>五棵松匯源空間
+                </td></tr>
+                <tr>
+                <td class="year">2016年
+                </td>
+                <td>1月10日
+                </td>
+                <td>台北站
+                </td>
+                <td>台北國際會議中心</a>
+                </td>
+                </tr>
+                <tr>
+                <th colspan="5">2016日本粉絲見面會 《A Happy IU Year 2016》
+                </th></tr>
+                <tr>
+                <td class="year">2016年
+                </td>
+                <td>1月23日
+                </td>
+                <td>東京站
+                </td>
+                <td>有明Differ Ariake Arena
+                </td>
+                </tr>
+                <tr>
+                <th colspan="5">2016中國巡迴音樂分享會 《IU Good Day》
+                </th></tr>
+                <tr>
+                <td rowspan="8" class="year">2016年
+                </td></tr>
+                <tr>
+                <td>7月9日
+                </td>
+                <td>廣州站
+                </td>
+                <td>中山紀念堂
+                </td>
+                </tr>
+                <tr>
+                <td>7月16日
+                </td>
+                <td>長沙站
+                </td>
+                <td>中南林業科技大學體育藝術館
+                </td>
+               </tr>
+                <tr>
+                <td>7月23日
+                </td>
+                <td>南京站
+                </td>
+                <td>南京太陽宮劇場
+                </td>
+                </tr>
+                <tr>
+                <td>7月30日
+                </td>
+                <td>重慶站
+                </td>
+                <td>重慶市人民大禮堂
+                </td>
+                </tr>
+                <tr>
+                <td>7月31日
+                </td>
+                <td>武漢站
+                </td>
+                <td>湖北洪山體育館
+                </td>
+                </tr>
+                <tr>
+                <td>8月20日
+                </td>
+                <td>成都站
+                </td>
+                <td>電子科技大學清水河校區體育館
+                </td>
+                </tr>
+                <tr>
+                <td>8月27日
+                </td>
+                <td>深圳站
+                </td>
+                <td>深圳體育館
+                </td>
+                </tr>
+                <tr>
+                <th colspan="5">八週年出道紀念粉絲見面會 《Uaena入學禮 - Ae-na呀!去上學吧!》
+                </th></tr>
+                <tr>
+                <td class="year">2016年
+                </td>
+                <td>9月18日
+                </td>
+                <td>首爾
+                </td>
+                <td>The K藝術廳
+                </td>
+                </tr>
+                <tr>
+                <th colspan="5">九週年出道紀念粉絲見面會 《九個書籤》
+                </th></tr>
+                <tr>
+                <td class="year">2017年
+                </td>
+                <td>9月24日
+                </td>
+                <td>首爾
+                </td>
+                <td>梨花女子大學</a>Samsung Hall
+                </td>
+                </tr>
+                <tr>
+                <th colspan="5">十週年出道紀念粉絲見面會 《IU+》
+                </th></tr>
+                <tr>
+                <td class="year">2018年
+                </td>
+                <td >9月15日
+                </td>
+                <td>首爾
+                </td>
+                <td>Universal Art Center
+                </td>
+                </tr>
+                <tr>
+                <th colspan="5">十一週年出道紀念粉絲見面會 《▶ ll &amp; U (PLAY, PAUSE AND U)》
+                </th></tr>
+                <tr>
+                <td class="year">2019年
+                </td>
+                <td>9月21日
+                </td>
+                <td>首爾
+                </td>
+                <td>慶熙大學和平殿堂
+                </td>
+                </tr></tbody></table>
+    </body>
+</html>

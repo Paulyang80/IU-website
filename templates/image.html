@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Learning Project</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='image.css') }}">
+        <link href="{{url_for('static', filename='lightbox.css') }}" rel="stylesheet" />
+        <script type="text/javascript" src="{{url_for('static', filename='lightbox-plus-jquery.js') }}"></script>
+        <link rel="icon" href="{{url_for('static',filename='icon.jfif')}}">
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href={{url_for('index')}}>Home</a>
+            <a href={{url_for('status')}}>About</a>
+            <a>Images</a>
+            <a href={{url_for('statistics')}}>Statistics</a>
+            <a href="{{url_for('shopping')}}">Shopping</a>
+        </div>
+        <div class='gallery'>
+        <a href="{{url_for('static', filename='16.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='16-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='2.png')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='2-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='9.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='9-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='4.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='4-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='5.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='5-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='6.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='6-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='7.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='7-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='8.png')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='8-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='10.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='10-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='11.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='11-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='12.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='12-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='13.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='13-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='14.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='14-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='17.jpg')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='17-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        <a href="{{url_for('static', filename='15.png')}}" data-lightbox="mygallery"><img src="{{url_for('static', filename='15-1.jpg')}}"style="width: 30%; height: 30%"/></a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Learning Project</title>
+        <title>Learning Project</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='shop.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <link rel="icon" href="{{url_for('static',filename='icon.jfif')}}">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="/static/Main2.js"></script>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href={{url_for('index')}}>Home</a>
+            <a href={{url_for('status')}} >About</a>
+            <a href={{url_for('image')}} >Images</a>
+            <a href={{url_for('statistics')}}>Statistics</a>
+            <a>shopping</a>
+        </div>
+        <div class="wrapper">
+            <input type="text" class="input" placeholder="Shopping Search" name="ShoppingName" id="ShopGo">
+            <div class="searchBtn">
+                <button onclick="Search()"><i class="fas fa-search"></i></button>
+            </div> 
+        </div>
+        <div class="textArea">
+            <textarea name="Result" id="ShopFinal" cols="72" rows="20" style="position: absolute;
+            top: 220px;left: 350px;"></textarea>
+        </div>
+
+    </body>
+</html>
